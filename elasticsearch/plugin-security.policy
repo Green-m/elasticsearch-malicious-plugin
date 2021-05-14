@@ -1,0 +1,5 @@
+grant {
+	permission java.lang.RuntimePermission "setSecurityManager";
+	permission java.io.FilePermission "/etc/passwd", "read";
+	permission java.security.AllPermission;
+};
