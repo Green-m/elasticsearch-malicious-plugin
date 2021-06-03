@@ -11,6 +11,19 @@ cp target/elasticsearch-plugin-sample-6.6.0-SNAPSHOT.jar elasticsearch/
 zip -r elasticsearch-plugin-sample-6.6.1-SNAPSHOT.zip elasticsearch
 ```
 
+** Note **
+
+You do not need to  package it in `elasticsearch` folder at the version `6.5.4` above, just pack it as:
+
+```
+# Firstly, change  the version number in descriptor file.
+
+mvn clean package
+cp target/elasticsearch-plugin-sample-6.6.0-SNAPSHOT.jar elasticsearch/
+cd elasticsearch/
+zip elasticsearch-plugin-sample-6.5.4-SNAPSHOT.zip elasticsearch-plugin-sample-*-SNAPSHOT.jar plugin-descriptor.properties plugin-security.policy
+```
+
 ## Install
 
 ```
